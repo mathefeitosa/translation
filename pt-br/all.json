@@ -94,6 +94,10 @@
           "TITLE": "Limiar de Sanguessuga",
           "DESCRIPTION": "Sanguessugas são cartas difíceis que você continua aprendendo e depois esquecendo novamente. Se você pressionar “esqueci” em um cartão mais vezes do que o este valor, iremos avisá-lo para que você possa descobrir por que está tendo dificuldades neste card e resolver este problema. Defina valores mais altos para ver o aviso de sanguessuga com menos frequência."
         },
+        "LEARN_AHEAD_LIMIT": {
+          "TITLE": "Limite para Aprender Antes da Hora",
+          "DESCRIPTION": "Quando chegar ao fim da fila diária, RemNote irá mostrar quantos minutos faltam antes dos cartões precisarem de revisão, para que você não termine sua revisão diária e imediatamente após tenha mais cartões para serem revisados."
+        },
         "AUTOPLAY_MEDIA": {
           "TITLE": "Reprodução Automática de Mídia ",
           "DESCRIPTION": "Ao mostrar um flashcard, reproduz automaticamente qualquer áudio ou vídeo contido nele."
@@ -105,6 +109,10 @@
         "SIMPLIFIED_FLASHCARD_BUTTONS": {
           "TITLE": "Botões dos Flashcard Simplificados ",
           "DESCRIPTION": "Mostrar apenas os botões de resposta “Esqueci” e “Recuperei com esforço” ao estudar os flashcards, em vez de todas as cinco opções."
+        },
+        "NEXT_DAY_STARTS_AT": {
+          "TITLE": "Próximo Dia Começa Em",
+          "DESCRIPTION": "Novos cartões aparecem na sua fila todos os dias no mesmo horário"
         }
       },
       "VISUAL": {
@@ -148,6 +156,10 @@
           "PC": "Ao pressionar Enter no meio de um Rem, crie uma quebra de linha dentro desse Rem e pressione Alt+Enter para dividir o texto em dois Rems separados. (Por padrão, Shift+Enter e Enter sozinho, respectivamente, servem essas funções.)",
           "MAC": "Ao pressionar Return no meio de um Rem, crie uma quebra de linha dentro desse Rem e pressione Opt+Return para dividir o texto em dois Rems separados. (Por padrão, Shift+Return e Return sozinho, respectivamente, servem essas funções.)"
         }
+      },
+      "ENTER_TO_OUTDENT": {
+        "TITLE": "Pressione Enter para Tirar Identação",
+        "LABEL": "Quando você pressionar Enter em um Rem que não tem conteúdo no nível mais alto do documento, ele irá retroceder uma indentação. (Se desativado, ele fica no mesmo nível e vazio)"
       },
       "DOUBLE_SLASH_FOR_COMMAND_MENU": {
         "TITLE": "Barra Dupla para Menu de Comando",
@@ -225,7 +237,6 @@
       "INVITE_FRIENDS_EARN_CREDIT": "Convide seus amigos para ganhar créditos! Você receberá <0>{{monthlyPrice}}</0> em crédito RemNote quando a pessoa que você convidou se inscrever com uma conta RemNote, e ele também receberá <0>{{monthlyPrice}}</0> de crédito para começar.",
       "CREDIT_BALANCE": "Balanco de Creditos",
       "CREDIT_BALANCE_TEXT": "Você tem<bold> {{userCredit}}</bold> de créditos restantes e ganhou<bold> {{userCreditEarned}}</bold> de créditos no total. {{months}} mês ou meses restantes de RemNote Pro gratuitamente.<div><br /> Assine o Pro para começar a usar seu crédito! Você não será cobrado até que seu crédito acabe.</div>",
-      "SUBSCRIBE_NOTICE": "<div><br />Assine o Pro para começar a usar seu crédito! Você não será cobrado até que seu crédito acabe.</div>",
       "TOAST_SUBSCRIBE": "Seus créditos serão aplicados automaticamente quando você assinar o RemNote Pro. Escolha um plano abaixo para começar!",
       "TOAST_RENEW": "Seus créditos serão aplicados automaticamente quando sua assinatura atual for renovada.",
       "APPLY_CREDIT": "Utilize seu crédito",
@@ -246,7 +257,8 @@
       "COPYLINK": "Copiar Link",
       "FRIENDS_TITLE": "Amigos",
       "INVITED_YOU": "(convidou você)",
-      "NOT_CONFIRMED_EMAIL": "(não confirmou e-mail)"
+      "NOT_CONFIRMED_EMAIL": "(não confirmou e-mail)",
+      "SUBSCRIBE_NOTICE": "<div><br />Assine o Pro para começar a usar seu crédito! Você não será cobrado até que seu crédito acabe.</div>"
     },
     "GLOBAL_INTERFACE": {
       "DARK_MODE": {
@@ -265,6 +277,16 @@
         "TITLE": "Dicas de Integração na Topo do Documento",
         "LABEL": "Mostre dicas sobre os recursos do RemNote na parte superior do seu documento.",
         "KEYWORDS": "dicas ajuda suporte aprender tutorial"
+      },
+      "LEFT_SIDEBAR_TUTORIALS": {
+        "TITLE": "Tutoriais Dentro Do App",
+        "LABEL": "Mostrar tutoriais sobre habilidades no RemNote que você está usando, no canto da tela.",
+        "KEYWORDS": "a mensagem flutuante da barra lateral ajuda no aprendizado do tutorial"
+      },
+      "ONBOARDING_TIPS_SHORTCUTS": {
+        "TITLE": "Dicas de Atalhos do Teclado",
+        "LABEL": "Mostre dicas nos atalhos do teclado que você está usando atualmente no canto da tela.",
+        "KEYWORDS": "mensagens flutuantes ajudam a aprender o tutorial"
       },
       "COMMUNITY_DOCUMENT_SEARCH_LANGUAGE": {
         "TITLE": "Idioma de Pesquisa de Documentos na Comunidade",
@@ -310,19 +332,21 @@
       "CUSTOMIZE_SIDEBAR_SECTIONS": {
         "TITLE": "Personalizar Seções da Barra Lateral"
       },
-      "COMMUNITY_TAB": {
-        "TITLE": "Link da Comunidade na Barra Lateral",
-        "LABEL": "Abre a Aba da Comunidade, onde você pode encontrar documentos públicos e grupos de estudo, na barra lateral. Se você desativar isso, ainda poderá navegar até ele por meio do menu de sua conta."
-      },
       "SORT_SIDEBAR": {
         "TITLE": "Ordenar Barra Lateral",
         "KEYWORDS": "Organizar barras-laterais ordernar de-A-a-Z"
       },
-      "PRIVACY_NOTE": "Privacidade: Leia nossa<policyLink>Política de Privacidade</policyLink>, ou altere suas configurações em nosso<hubLink>Centro de privacidade</hubLink> ."
+      "PRIVACY_NOTE": "Privacidade: Leia nossa<policyLink>Política de Privacidade</policyLink>, ou altere suas configurações em nosso<hubLink>Centro de privacidade</hubLink> .",
+      "COMMUNITY_TAB": {
+        "TITLE": "Link da Comunidade na Barra Lateral",
+        "LABEL": "Abre a Aba da Comunidade, onde você pode encontrar documentos públicos e grupos de estudo, na barra lateral. Se você desativar isso, ainda poderá navegar até ele por meio do menu de sua conta."
+      }
     },
     "NOTIFICATIONS": {
       "ENABLE_PUSH_TITLE": "Ativar notificações push?",
       "ENABLE_PUSH_LABEL": "Receba notificações diretamente no seu dispositivo móvel",
+      "ENABLE_DUE_CARDS_TITLE": "Habilitar sinalizador dos cartões a serem revisados?",
+      "ENABLE_DUE_CARDS_LABEL": "Mostrar o número total de cartões como um distintivo no ícone do aplicativo RemNote?",
       "ENABLE_EMAIL_TITLE": "Ativar notificações por e-mail?",
       "ENABLE_EMAIL_LABEL": "Receba notificações diretamente em seu e-mail",
       "TOGGLE_TITLE": "Filtrar notificações",
@@ -439,6 +463,8 @@
         "MOVE_TABLE_TO_TITLE": "Mover Tabela Para",
         "MOVE_LIST_TO_TITLE": "Mover Lista Para",
         "DUPLICATE_TABLE_VIEW_TITLE": "Duplicar Vizualização da Tabela",
+        "ADD_TABLE_VIEW_TITLE": "Adicionar Visão em Tabela",
+        "ADD_LIST_VIEW_TITLE": "Adicionar Visão em Lista",
         "DUPLICATE_LIST_VIEW_TITLE": "Duplicar Vizualização da Lista",
         "DUPLICATE_VIEW_MESSAGE_COMMON": "Duplique uma visualização para aplicar um novo filtro, ordenamento, ou mais! O conteúdo é compartilhado entre visualização de uma mesma fonte, para que você não acabe com instâncias acidentalmente duplicadas.",
         "SHOW_VERTICAL_LINES_TITLE": "Mostar Linhas Verticais",
@@ -589,6 +615,24 @@
         "PAYWALL": "Você atingiu seu limite de uploads de PDF.",
         "todo_for_the_item_below": "mover isso para um objeto nome de recurso global?",
         "FEATURE_NAME": "Grifos de PDF"
+      }
+    }
+  },
+  "ONBOARDING": {
+    "SIDEBAR": {
+      "INITIAL": {
+        "0": {
+          "TITLE": "Criar Uma Pasta"
+        },
+        "1": {
+          "TITLE": "Adicionar uma Marcador?"
+        },
+        "2": {
+          "TITLE": "Criar um Flashcard"
+        },
+        "3": {
+          "TITLE": "Estruturar Notas Usando Tab"
+        }
       }
     }
   }
